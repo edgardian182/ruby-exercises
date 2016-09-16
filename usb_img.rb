@@ -36,10 +36,19 @@ def download
     # Also eliminates the file from the USB
     # File.rename name, new_name  => We can't use it to move a file
 
-    FileUtils.cp(name, new_name)
-    FileUtils.rm(name)
-
-
+    if File.exist?(new_name)
+      puts
+      puts "The file #{new_name} already exist"
+      puts "Would you like to overwrite the File? (y/n)"
+      answer = gets.chomp
+      if answer == 'y'
+        remove(name,new_name)
+      else
+        exit
+      end
+    else
+      remove(name,new_name)
+    end
     pic_number += 1
 
   end
@@ -47,6 +56,11 @@ def download
   puts
   puts "Everything done!"
 
+end
+
+def remove(name,new_name)
+  FileUtils.cp(name, new_name)
+  FileUtils.rm(name)
 end
 
 download
