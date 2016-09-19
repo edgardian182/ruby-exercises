@@ -1,0 +1,38 @@
+o o
+---
+
+O O
+===
+
+(o)(o)
+ ----
+
+(O)(O)
+======
+
+------
+(o)(o)
+  |
+ ----
+
+ ------
+ (o)(o)
+   |_
+  ====
+
+
+  ''   => Hambre
+  !!   => Baño
+  ""   => Sueño
+
+  o        .. => POO      => dura 30 s
+
+  O        .. => POO      => dura 1 min
+
+  o--o  O--O     .. => POO      => dura 2 min
+
+  o o   O O      oo => POO      => dura 5 min
+  ---   ===
+
+  (o)(o)    (O)(O)    oo => POO  => dura 10 min
+   ----      ====
