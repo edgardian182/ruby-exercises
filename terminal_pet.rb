@@ -55,19 +55,26 @@ while true
         " " + n + " "
       end
     end
+    # Se usa para que cada cierto tiempo muestre la necesidad de la mascota
+    puts "I'm hungry" if time % 8 == 0
   end
 
   if face == 1
+    puts "Feed(f)  /  Sleep(z)  /  Poo(p)"
+    puts
     pet_arr.each {|n| puts n.rjust(walk)}
     # sleep 0.3
     face = 0
     user_order
     time += 1
     # system "osascript -e 'tell app \"System Events\" to display alert \"Your pet need you\"'" if time > 10
+        # Also use 'display dialog'
     # system "osascript -e 'display notification \"Your pet need you\" with title \"Terminal Pet\"'" if time > 10
 
     system "clear"
   else
+    puts "Feed(f)  /  Sleep(z)  /  Poo(p)"
+    puts
     pet_arr2.each {|n| puts n.rjust(walk)}
     # sleep 0.3
     face = 1
